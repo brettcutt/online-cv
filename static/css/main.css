@@ -1,0 +1,450 @@
+body {
+    font-family: 'Nobile', sans-serif !important;
+}
+
+
+.pos-r {
+    position: relative;
+}
+
+.center {
+    text-align: center;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.margin-t-100 {
+    margin-top: 100px;
+}
+.margin-t-75 {
+    margin-top: 75px;
+}
+.margin-t-50 {
+    margin-top: 50px;
+}
+.margin-t-25 {
+    margin-top: 25px;
+}
+.margin-b-100 {
+    margin-bottom: 100px;
+}
+.margin-b-75 {
+    margin-bottom: 75px;
+}
+.margin-b-50 {
+    margin-bottom: 50px;
+}
+.margin-b-25 {
+    margin-bottom: 25px;
+}
+
+.padding-t-100 {
+    padding-top: 100px;
+}
+.padding-t-75 {
+    padding-top: 75px;
+}
+.padding-t-50 {
+    padding-top: 50px;
+}
+.padding-t-25 {
+    padding-top: 25px;
+}
+
+.text-shadow {
+    text-shadow: 5px -1px 15px rgba(0, 0, 0, 1);
+}
+.test2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    z-index: 1;
+}
+.test {
+    
+    animation-name: test;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background-image: linear-gradient(rgba(255,255,255,9), rgba(255,255,255,0));
+}
+
+@keyframes test {
+    from {height: 0px}
+    to {height: 70px}
+}
+
+.test-reverse {
+    
+    animation-name: test-reverse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    background-image: linear-gradient(rgba(255,255,255,9), rgba(255,255,255,0));
+}
+
+@keyframes test-reverse {
+    from {height: 80px}
+    to {height: 0px}
+}
+
+.index{
+    width: 100%;
+    height: 100vh;
+    padding-top: 10%;
+    text-align: center;
+    background-image: url(../images/index-pen.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav{
+    top: 380px;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    z-index: 1;;
+}
+
+.pos {
+    position: fixed;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    transform-origin: center center;
+    transform: rotate(90deg);
+
+}
+
+nav li {
+    transform: rotate(-90deg);
+    display: inline-block;
+    margin: 0 0px 0 -60px;
+    width: 100px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.change-color {
+    animation-name: color-black;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes color-black {
+    from {color: #fff; text-shadow: 0px 0px 10px rgba(0, 0, 0, 1)}
+    to {color: #000; text-shadow: 2px 2px 2px rgba(255, 255, 255, 1)}
+}
+
+.change-color-reverse {
+    animation-name: color-white;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes color-white {
+    from {color: #000}
+    to {color: #fff}
+}
+
+.rise {
+    animation-name: rise;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rise {
+    from {top: 380px; }
+    to {top: 15px; float: right;}
+}
+
+.rise-reverse {
+    animation-name: rise-reverse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rise-reverse {
+    from {top: 15px;}
+    to {top: 380px; }
+}
+
+.rotateli {
+    animation-name: rotateli;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateli {
+    from {transform: rotate(90deg); padding: 0px; margin: 0 0px 0 -60px; width: 100px}
+    to {transform: rotate(0deg); padding: 10px; margin: 0 0px 0 0px; width: auto;}
+}
+
+.rotateli-reverse {
+    animation-name: rotateli-reverse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotateli-reverse {
+    from {transform: rotate(0deg); padding: 10px;}
+    to {transform: rotate(-90deg); padding: 0px;}
+}
+
+.rotateul {
+    animation-name: rotateul;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes rotateul {
+    from {transform: rotate(-90deg);}
+    to {transform: rotate(360deg);}
+}
+
+.rotateul-reverse {
+    animation-name: rotateul-reverse;
+    animation-duration: 1s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes rotateul-reverse {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(450deg);}
+}
+
+
+.about-me {
+    min-height: 100vh;
+}
+
+.about-me-left {
+    background-image: linear-gradient(to right, rgb(124, 121, 121), white);
+    min-height: 100vh !important;
+    text-align: left;
+}
+
+.about-me-description {
+    padding: 0px 60px 0;
+}
+
+.about-me-description p {
+    font-size: 18px;
+}
+
+.about-me-right {
+    
+    background-image: url(../images/profile-glass.jpg);
+    background-attachment: fixed;
+    background-position: 85% 0%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height:100vh!important;
+}
+
+/* SKILLS */
+.skills h3 {
+    border-radius: 100px;
+    background-color:  rgba(255,255,255,.9);
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.skills {
+    background-image: url(../images/skills.jpg);
+    background-attachment: fixed;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.progress {
+    position: relative;
+    height: 25px;
+    margin-bottom: 20px;
+    background-color: #8699ad !important;
+    border-radius: 20px !important;
+}
+
+.progress-type {
+    position:absolute;
+    left: 0px;
+    padding: 3px 2px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    border-radius: 20px;
+}
+
+.html {
+    background-color: #e34c26 !important;
+}
+.css {
+    background-color: #3b5998 !important;
+}
+.scss {
+    background-color: #c6538c !important;
+}
+.javascript {
+    background-color: #f7df1e !important;
+}
+.jquery {
+    background-color: #7acef4 !important;
+}
+.django {
+    background-color: #0C4B33 !important;
+}
+.mongo {
+    background-color: #4DB33D !important;
+}
+.mysql {
+    background-color: #f29111 !important;
+}
+.bootstrap {
+    background-color: #563d7c !important;
+}
+.git {
+    background-color: #f34f29 !important;
+}
+.python {
+    background-color: #306998 !important;
+}
+
+.flask {
+    background-color: #000 !important;
+}
+
+
+
+
+
+
+/*  WORK HISTORY    */
+
+.work-history {
+    background-color: rgb(160, 158, 158);
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+.timeline-item {
+    position: relative;
+    color: #000;
+    border-left: 1px solid;
+    padding: 15px 20px 30px;
+    display: inline-block;
+}
+
+.timeline-item p {
+    padding: 0;
+    float: none;
+    margin: 0;
+}
+
+.timeline-item::before {
+    content: attr(dates);
+    position: absolute;
+    color: #000;
+    left: 20px;
+    top: -4px;
+    display: block;
+    font-weight: 500;
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item::after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 0;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content:'';
+    background: #000; 
+}
+
+.white-disc::after {
+    background: #fff; 
+}
+
+.red {
+    background-color: rebeccapurple;
+}
+
+.history-description:not(:first-child) {
+    display: none;
+}
+
+.history-description div {
+    text-align: left;
+}
+
+
+.history-right-parent {
+    display: flex;
+}
+.history-right-child {
+    margin:15% auto 0;
+}
+
+
+.line {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    margin-left: -21px;
+    margin-right: -20px;
+    animation-name: line-grow;
+    animation-duration: 1.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes line-grow {
+    0% {height: 0px; width: 0%;}
+    50% {height: 54px; width: 0px;}
+    100% {height: 54px; width: 110%}
+}
+
+.underline {
+    margin: 10px auto 25px;
+    width: 200px;
+    height: 2px;
+    background-color: #fff;
+}
