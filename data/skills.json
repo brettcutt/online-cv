@@ -1,0 +1,86 @@
+[
+    {
+        "type": "languages",
+        "name": "HTML 5",
+        "color": "html",
+        "width": "width: 90%",
+        "valuenow": 90
+    },
+    {
+        "type": "languages",
+        "name": "CSS 3",
+        "color": "css",
+        "width": "width: 90%",
+        "valuenow": 90
+    },
+    {
+        "type": "languages",
+        "name": "SCSS",
+        "color": "scss",
+        "width": "width: 70%",
+        "valuenow": 70
+    },
+    {
+        "type": "languages",
+        "name": "Javascript",
+        "color": "javascript",
+        "width": "width: 70%",
+        "valuenow": 70
+    },
+    {
+        "type": "languages",
+        "name": "Jquery",
+        "color": "jquery",
+        "width": "width: 80%",
+        "valuenow": 80
+    },
+    {
+        "type": "languages",
+        "name": "Python",
+        "color": "python",
+        "width": "width: 80%",
+        "valuenow": 80
+    },
+    {
+        "type": "frameworks",
+        "name": "Bootstrap",
+        "color": "bootstrap",
+        "width": "width: 90%",
+        "valuenow": 90
+    },
+    {
+        "type": "frameworks",
+        "name": "Flask",
+        "color": "flask",
+        "width": "width: 70%",
+        "valuenow": 70
+    },
+    {
+        "type": "frameworks",
+        "name": "Django",
+        "color": "django",
+        "width": "width: 70%",
+        "valuenow": 70
+    },
+    {
+        "type": "databases",
+        "name": "Mongo DB",
+        "color": "mongo",
+        "width": "width: 70%",
+        "valuenow": 70
+    },
+    {
+        "type": "databases",
+        "name": "MySQL",
+        "color": "mysql",
+        "width": "width: 60%",
+        "valuenow": 60
+    },
+    {
+        "type": "version control",
+        "name": "Git",
+        "color": "git",
+        "width": "width: 80%",
+        "valuenow": 80
+    }
+]

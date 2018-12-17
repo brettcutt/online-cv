@@ -1,0 +1,64 @@
+[
+   {
+      "name": "Inversion Jiu-jitsu",
+      "description": [
+         "HTML 5",
+         "CSS 3"
+      ],
+      "github": "https://github.com/brettcutt/inversion-jiu-jitsu",
+      "live_url": "https://brettcutt.github.io/inversion-jiu-jitsu/",
+      "image": "bjj.jpg"
+   },
+   {
+      "name": "SA Offences",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "Javascript"
+      ],
+      "github": "https://github.com/brettcutt/sa-offences",
+      "live_url": "https://brettcutt.github.io/sa-offences/",
+      "image": "sa-offences.jpg"
+   },
+   {
+      "name": "Conundrum",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "Flask",
+         "Jquery",
+         "Python"
+      ],
+      "github": "https://github.com/brettcutt/conundrum",
+      "live_url": "http://conundrum.herokuapp.com/",
+      "image": "conundrum.jpg"
+   },
+   {
+      "name": "The Chefs Desire",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "Flask",
+         "Jquery",
+         "Python",
+         "Mongo DB"
+      ],
+      "github": "https://github.com/brettcutt/the-chefs-desire",
+      "live_url": "https://the-chefs-desire.herokuapp.com/",
+      "image": "chef-desire.jpg"
+   },
+   {
+      "name": "Unicorn Attractor",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "Jquery",
+         "Django",
+         "Python",
+         "SQLite"
+      ],
+      "github": "https://github.com/brettcutt/issue-tracker",
+      "live_url": "https://unicorn-bug-tracker.herokuapp.com/",
+      "image": "issue-tracker.jpg"
+   }
+]
