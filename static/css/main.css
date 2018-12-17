@@ -70,12 +70,12 @@ body {
     animation-duration: 1s;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    background-image: linear-gradient(rgba(255,255,255,9), rgba(255,255,255,0));
+    background-color: rgba(148, 144, 144, 0.8);
 }
 
 @keyframes test {
     from {height: 0px}
-    to {height: 70px}
+    to {height: 40px}
 }
 
 .test-reverse {
@@ -84,11 +84,11 @@ body {
     animation-duration: 1s;
     animation-direction: normal;
     animation-fill-mode: forwards;
-    background-image: linear-gradient(rgba(255,255,255,9), rgba(255,255,255,0));
+    background-color: rgba(148, 144, 144, 0.8);
 }
 
 @keyframes test-reverse {
-    from {height: 80px}
+    from {height: 40px}
     to {height: 0px}
 }
 
@@ -150,8 +150,8 @@ nav a:hover {
 }
 
 @keyframes color-black {
-    from {color: #fff; text-shadow: 0px 0px 10px rgba(0, 0, 0, 1)}
-    to {color: #000; text-shadow: 2px 2px 2px rgba(255, 255, 255, 1)}
+    from {color: #fff;}
+    to {color: #000; }
 }
 
 .change-color-reverse {
@@ -175,7 +175,7 @@ nav a:hover {
 
 @keyframes rise {
     from {top: 380px; }
-    to {top: 15px; float: right;}
+    to {top: 0px; float: right;}
 }
 
 .rise-reverse {
@@ -186,7 +186,7 @@ nav a:hover {
 }
 
 @keyframes rise-reverse {
-    from {top: 15px;}
+    from {top: 0px;}
     to {top: 380px; }
 }
 
@@ -353,7 +353,8 @@ nav a:hover {
 /*  WORK HISTORY    */
 
 .work-history {
-    background-color: rgb(160, 158, 158);
+    background-image: linear-gradient( rgba(122, 121, 121, .1), rgba(160, 158, 158,.5), rgba(122, 121, 121, .1));
+    background-attachment: fixed;
     padding-top: 75px;
     padding-bottom: 100px;
 }
@@ -448,3 +449,82 @@ nav a:hover {
     height: 2px;
     background-color: #fff;
 }
+
+.projects {
+    padding-top: 75px;
+    min-height: 100vh;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.card {
+    margin: 0 auto 25px;
+}
+
+
+.card p {
+    margin: 0;
+}
+
+
+
+.contact {
+    min-height: 100vh;
+    background-color: gainsboro;
+}
+
+.contact-left {
+    padding-top: 100px;
+}
+
+.projects ul {
+    columns: 2;
+    padding-bottom: 30px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-2 {
+    display: flex;
+    padding: 0 2.5em 0 !important;
+}
+
+.inner-flex {
+    flex: 1;
+    width: 100%;
+}
+
+.icons {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+}
+
+.project-icon {
+    display: inline-block;
+    font-size: 30px;
+    color: #8F8F8F;
+    margin: 0px 15px;
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    background-color: #C3C3C3;
+    border-radius: 100px;
+    }
+    
+    .project-icon:hover {
+        color: #564F6F;
+    }

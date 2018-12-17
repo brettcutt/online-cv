@@ -1,0 +1,49 @@
+{% block history %}
+<span id='history'></span>
+<div class='work-history'>
+    <div class='container'>
+        <h2 class="center">History</h2>
+        <div class="row padding-t-25">
+            <div class='col-12 col-sm-6'>
+
+                {% for item in history %}
+                <div class="timeline-item" dates='{{ item.date }}'>
+                    <p><b>{{ item.position }}</b></p>
+                    <p>{{ item.company }}</p>
+                    <div class='growing-line d-none d-lg-block'></div>
+                </div>
+                <br>
+                {% endfor %}
+
+            </div>
+
+            <div class='col-12 col-sm-6 history-right-parent'>
+                <div class='history-right-child'>
+
+                    {% for item in history %}
+                    <div class="history-description">
+                        <h4 class='center'>{{ item.position }}</h4>
+                        <div class="underline"></div>
+                        {% for description in item.description %}
+                        <p>{{ description }}
+                        </p>
+                        {% endfor %}
+                        <div>
+                            {% if item.other_tasks  %}
+                            <p>Other tasks included:</p>
+                            <ul>
+                                {% for task in item.other_tasks %}
+                                <li>{{ task }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif%}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

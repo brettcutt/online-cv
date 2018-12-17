@@ -1,0 +1,39 @@
+{% block projects %}
+<span id='projects'></span>
+<div class='projects'>
+    <div class="container">
+        <h2 class="center">Projects</h2>
+        <div class="row margin-t-50 margin-b-75 flex">
+
+            {% for item in projects %}
+            <div class="col-12 col-sm-6 col-6 col-lg-4 flex-2">
+                <div class="card inner-flex" style="width: 18rem;">
+                    <a target="_blank" href='{{ item.live_url }}'>
+                        <img class="card-img-top" src="static/images/{{ item.image }}" alt="Card image cap">
+                    </a>
+                    <div class="card-body">
+                        <h5 class='center'>{{item.name}}</h5>
+                        <ul>
+                            {% for component in item.description %}
+                            <li>{{ component }}</li>
+                            {% endfor %}
+                        </ul>
+                        <div class="center icons">
+                            <a class='project-icon' target="_blank" href='{{ item.live_url }}'>
+                                <i class="fa fa-laptop" aria-hidden="true"></i>
+                            </a>
+                            <a class='project-icon' target="_blank" href='{{ item.github }}'>
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
