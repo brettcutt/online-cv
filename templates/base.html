@@ -10,6 +10,15 @@
     <link rel="stylesheet" type="text/css" media="screen" href="static/css/main.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="static/bootstrap/bootstrap.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Nobile" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init(`{{emailjsid}}`);
+        })();
+    </script>
+
 </head>
 
 <body>
@@ -17,6 +26,19 @@
     {% block content %}
     {% endblock %}
 
+    <footer>
+        <div>
+            <a class='inline' href="https://www.facebook.com/brett.cutting.5" target="_blank"><i class="fa fa-facebook-f"></i></a>
+            <a class='inline' href="https://github.com/brettcutt/issue-tracker" target="_blank"><i class="fa fa-github"></i></a>
+            <a class='inline' href="static/cv/cv.pdf" target="_blank"><i class="fa fa-file-pdf-o" aria-hidden="true"></i></a>
+            <br>
+
+            <p class="web-developer">©2018 | Web development by Brett Cutting</p>
+
+        </div>
+
+    </footer>
+    <script src='static/js/send-email.js'></script>
     <script src="static/js/jquery-3.3.1.slim.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>

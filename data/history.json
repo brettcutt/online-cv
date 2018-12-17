@@ -3,13 +3,18 @@
         "dates": "Jun 2018 - Current",
         "position": "FullTime Software Development Student",
         "company": "Code Institute",
-        "description": ["Started the full stack web development course by Code Institude on the 14th of June2018, and submitted all projects finishing the course on 11th December 2018."]
+        "description": [
+            "Started the full stack web development course by Code Institude on the 14th of June2018, and submitted all projects finishing the course on 11th December 2018."
+        ]
     },
     {
         "dates": "Oct 2017 - Apr 2018",
         "position": "Panel Installer",
         "company": "Ace Panel Systems- Adelaide, South Australia",
-        "description": ["Ace Panel Systems build industrial and commercial coolrooms, freezers and ice rooms, using foam insulated panels with a thin steel outer layer.", "The main tasks involved assisting the leading hand to mark out, cut, erect and secure foam panels."],
+        "description": [
+            "Ace Panel Systems build industrial and commercial coolrooms, freezers and ice rooms, using foam insulated panels with a thin steel outer layer.",
+            "The main tasks involved assisting the leading hand to mark out, cut, erect and secure foam panels."
+        ],
         "other_tasks": [
             "Securing of base channel to concrete foundation.",
             "The 2nd fix of quarter round angle.",
@@ -20,13 +25,18 @@
         "dates": "Sept 2017 - Oct 2017",
         "position": "Cladder",
         "company": "SA Construct - Adelaide, South Australia",
-        "description": ["SA Construct is a commercial and residential cladding and roofing company.", "In my short time here before taking another job offer, I worked on Adelaide's St Andrews Hospital, securing lengths of aluminium battens and 600 x 300 terracotta tiles to the building exterior."]
+        "description": [
+            "SA Construct is a commercial and residential cladding and roofing company.",
+            "In my short time here before taking another job offer, I worked on Adelaide's St Andrews Hospital, securing lengths of aluminium battens and 600 x 300 terracotta tiles to the building exterior."
+        ]
     },
     {
         "dates": "Apr 2017 - Jul 2017",
         "position": "Warehouse Worker",
         "company": "AECOM/URS- Mannheim, Baden Württemberg, Germany",
-        "description": ["I worked for AECOM/URS for the last 3 and a half months of my working holiday visa in Germany. Here I was a part of a process to make a second verification of the quality and quantity of received stock, before issuing it off to the next handler."],
+        "description": [
+            "I worked for AECOM/URS for the last 3 and a half months of my working holiday visa in Germany. Here I was a part of a process to make a second verification of the quality and quantity of received stock, before issuing it off to the next handler."
+        ],
         "other_tasks": [
             "Inventory of Stock.",
             "Filing and sorting of documents."
@@ -36,7 +46,9 @@
         "dates": "Jan 2007 - Dec 2011",
         "position": "Carpenter (Leading Hand)",
         "company": "Renovations by Vaughan - Adelaide, South Australia",
-        "description": ["I continued to work for Renovations by Vaughan for another 5 and a half years after my appenticeship. I assumed the role as leading hand, managing teams between 1 and 4 people depending on the type of project. I left my role in May 2016 to start the preparations of a working holiday visa in Germany."],
+        "description": [
+            "I continued to work for Renovations by Vaughan for another 5 and a half years after my appenticeship. I assumed the role as leading hand, managing teams between 1 and 4 people depending on the type of project. I left my role in May 2016 to start the preparations of a working holiday visa in Germany."
+        ],
         "other_tasks": [
             "Carrying out construction, alterations or renovations to residential and on occasion commercial structures.",
             "Management and Organisation of Work sites.",
@@ -48,9 +60,11 @@
         "dates": "Jan 2007 - Dec 2011",
         "position": "Apprentice Carpenter",
         "company": "Renovations by Vaughan - Adelaide, South Australia",
-        "description": ["I officially started working for Renovations by Vaughan in January 2007 after completing a 2 week work experience in December 2006 and straight after year 12. After a couple of years into my aprenticeship I would occasionally take on the leading hand role and managing 1 - 2 other apprentices under the guidence of my supervision."],
+        "description": [
+            "I officially started working for Renovations by Vaughan in January 2007 after completing a 2 week work experience in December 2006 and straight after year 12. After a couple of years into my apprenticeship I would occasionally take on the leading hand role and managing 1 - 2 other apprentices under the guidence of my supervision."
+        ],
         "other_tasks": [
-            "Assited the leading hand with the construction, alteration or renovation to residential structures.",
+            "Assisted the leading hand with the construction, alteration or renovation to residential structures.",
             "Collection and assembly of building supplies.",
             "Maintaining a clean and safe work environment.",
             "Fulfilling and completing any training or module requirements.",

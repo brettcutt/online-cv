@@ -7,22 +7,25 @@
         <div class="row">
             <div class="col-12 col-sm-6 contact-left">
                 <h2 class="center margin-b-75">Contact</h2>
-                <form>
+                <form id='contact-form' onsubmit="return sendMail(this)" method='POST'>
                     <div class="form-group">
-                        <input required type="text" class="form-control" id="name" placeholder="Name">
+                        <input required type="text" class="form-control" name='name' id="name" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <input required type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        <input required type="email" class="form-control" name='email' id="email" aria-describedby="emailHelp"
                             placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <input required type="tel" class="form-control" id="phone" placeholder="Phone">
+                        <input required type="tel" class="form-control" name='phone' id="phone" placeholder="Phone">
                     </div>
 
                     <div class="form-group">
-                        <textarea required class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder='Message'></textarea>
+                        <textarea required class="form-control" id="message" name='message' rows="3" placeholder='Message'></textarea>
                     </div>
-                    <button type="submit" class="btn git"><b>Send</b></button>
+
+                    <audio id="audio" src="static/sounds/button-20.mp3" autoplay="false"></audio>
+                    <button type="submit" class="button inline" onclick="document.getElementById('audio').play();">Send</button>
+                    <div class='inline' id="message-response"></div>
                 </form>
             </div>
             <div class="col-12 col-sm-6 center contact-right">
@@ -30,6 +33,7 @@
 
         </div>
     </div>
+
 </div>
 
 {% endblock %}
