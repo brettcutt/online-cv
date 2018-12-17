@@ -53,8 +53,35 @@ body {
     padding-top: 25px;
 }
 
+.padding-b-100 {
+    padding-bottom: 100px;
+}
+.padding-b-75 {
+    padding-bottom: 75px;
+}
+.padding-b-50 {
+    padding-bottom: 50px;
+}
+.padding-b-25 {
+    padding-bottom: 25px;
+}
+
 .text-shadow {
     text-shadow: 5px -1px 15px rgba(0, 0, 0, 1);
+}
+
+.short-line {
+    width:50px;
+    height: 4px;
+    background-color: #fff;
+    margin: 0 auto 50px;
+}
+
+.short-line-black {
+    width:50px;
+    height: 4px;
+    background-color: #000;
+    margin: 0 auto 50px;
 }
 .test2{
     position: fixed;
@@ -240,9 +267,16 @@ nav a:hover {
     to {transform: rotate(450deg);}
 }
 
-
+/* ##########################    ABOUT ME */
 .about-me {
     min-height: 100vh;
+}
+
+.long-line {
+        width:200px;
+        height: 2px;
+        background-color: #000;
+    
 }
 
 .about-me-left {
@@ -269,7 +303,7 @@ nav a:hover {
     min-height:100vh!important;
 }
 
-/* SKILLS */
+/* ##########################    SKILLS */
 .skills h3 {
     border-radius: 100px;
     background-color:  rgba(255,255,255,.9);
@@ -284,7 +318,7 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
-    padding-top: 80px;
+    padding-top: 50px;
 }
 
 .progress {
@@ -350,13 +384,33 @@ nav a:hover {
 
 
 
-/*  WORK HISTORY    */
+/* ############################ HISTORY */
+
+.overlay-white {
+    background-color: rgba(255, 255, 255, .45);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
 
 .work-history {
-    background-image: linear-gradient( rgba(122, 121, 121, .1), rgba(160, 158, 158,.5), rgba(122, 121, 121, .1));
+    background-image: url(../images/history1.jpg);
     background-attachment: fixed;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh!important;
+    position: relative;
     padding-top: 75px;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
+}
+
+.work-history > div {
+background-color: rgba(255,255,255,.9);
+border-radius: 10px;
+padding-bottom: 25px;
 }
 
 .timeline-item {
@@ -370,6 +424,7 @@ nav a:hover {
 .timeline-item p {
     padding: 0;
     float: none;
+    color: #000;
     margin: 0;
 }
 
@@ -399,12 +454,14 @@ nav a:hover {
 }
 
 .white-disc::after {
-    background: #fff; 
+    background: #000; 
 }
 
 .red {
     background-color: rebeccapurple;
 }
+
+
 
 .history-description:not(:first-child) {
     display: none;
@@ -414,21 +471,27 @@ nav a:hover {
     text-align: left;
 }
 
+.work-history h2 {
+    color: #000;
+}
 
 .history-right-parent {
     display: flex;
+    color: #000;
 }
+
+
 .history-right-child {
-    margin:15% auto 0;
+    margin:8% auto 0;
 }
 
 
 .line {
     position: absolute;
     top: 10px;
-    left: 20px;
-    border-left: 2px solid #fff;
-    border-bottom: 2px solid #fff;
+    left: 19.99px;
+    border-left: 2px solid #000;
+    border-bottom: 2px solid #000;
     margin-left: -21px;
     margin-right: -20px;
     animation-name: line-grow;
@@ -447,44 +510,31 @@ nav a:hover {
     margin: 10px auto 25px;
     width: 200px;
     height: 2px;
-    background-color: #fff;
+    background-color: #000;
 }
 
+
+/* ############################ PROJECTS */
 .projects {
-    padding-top: 75px;
-    min-height: 100vh;
+    background-image: url(../images/projects1.jpeg);
+    background-attachment: fixed;
+    background-position: bottom ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh!important;
+    position: relative;
 }
-
-.overlay {
-    background-color: rgba(0, 0, 0, .4);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 0;
+.projects h2 {
+    color: #fff;
 }
 
 .card {
     margin: 0 auto 25px;
 }
 
-
 .card p {
     margin: 0;
 }
-
-
-
-.contact {
-    min-height: 100vh;
-    background-color: gainsboro;
-}
-
-.contact-left {
-    padding-top: 100px;
-}
-
 .projects ul {
     columns: 2;
     padding-bottom: 30px;
@@ -528,3 +578,40 @@ nav a:hover {
     .project-icon:hover {
         color: #564F6F;
     }
+
+/* ############################ CONTACT */
+
+.contact {
+    background-image: url(../images/phone2.jpg);
+    background-attachment: fixed;
+    background-position: 85% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height:100vh!important;
+    position: relative;
+}
+
+.contact h2 {
+    color: #000;
+    display: inline-block;
+    background-color: rgba(255,255,255,.7);
+    border-radius: 100px;
+    padding: 5px 200px 5px 20px;
+}
+
+.contact-left {
+    padding-top: 100px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, .3);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.btn {
+    color: #fff;
+}

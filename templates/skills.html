@@ -3,17 +3,20 @@
 <span id='skills'></span>
 <div class='skills'>
     <h2 class="center">Skills</h2>
+    <div class="short-line-black"></div>
     <div class='container'>
 
-        <div class="row padding-t-50">
+        <div class="row">
             <div class="col-12 col-sm-6 center">
                 <h3 class='margin-b-25'>Languages</h3>
                 {% for item in skills %}
                 {% if item.type == 'languages' %}
 
                 <div class="progress">
-                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="{{item.width}}""
-                        aria-valuenow="{{ item.valuenow }}" aria-valuemin="0" aria-valuemax="100">
+                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        style="{{item.width}}""
+                        aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
                         <span class="sr-only"></span>
                         <span class="progress-type">{{ item.name }}</span>
                     </div>
@@ -22,17 +25,19 @@
                 {% endfor %}
             </div>
 
-            
+
             <div class="col-12 col-sm-6 center">
                 <h3 class='margin-b-25'>Frameworks</h3>
 
                 {% for item in skills %}
                 {% if item.type == 'frameworks' %}
                 <div class="progress">
-                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="{{item.width}}""
-                            aria-valuenow="{{ item.valuenow }}" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only"></span>
-                            <span class="progress-type">{{ item.name }}</span>
+                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        style="{{item.width}}""
+                            aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
+                        <span class="sr-only"></span>
+                        <span class="progress-type">{{ item.name }}</span>
                     </div>
                 </div>
                 {% endif %}
@@ -40,17 +45,19 @@
 
             </div>
 
-            
+
             <div class="col-12 col-sm-6 center">
                 <h3 class='margin-b-25'>Databases</h3>
-                
+
                 {% for item in skills %}
                 {% if item.type == 'databases' %}
                 <div class="progress">
-                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="{{item.width}}""
-                            aria-valuenow="{{ item.valuenow }}" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only"></span>
-                            <span class="progress-type">{{ item.name }}</span>
+                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        style="{{item.width}}""
+                            aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
+                        <span class="sr-only"></span>
+                        <span class="progress-type">{{ item.name }}</span>
                     </div>
                 </div>
                 {% endif %}
@@ -64,10 +71,12 @@
                 {% for item in skills %}
                 {% if item.type == 'version control' %}
                 <div class="progress">
-                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="{{item.width}}""
-                            aria-valuenow="{{ item.valuenow }}" aria-valuemin="0" aria-valuemax="100">
-                            <span class="sr-only"></span>
-                            <span class="progress-type">{{ item.name }}</span>
+                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        style="{{item.width}}""
+                            aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
+                        <span class="sr-only"></span>
+                        <span class="progress-type">{{ item.name }}</span>
                     </div>
                 </div>
                 {% endif %}
