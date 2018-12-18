@@ -1,5 +1,6 @@
 
 function sendMail(contactForm) {
+    emailjs.init('user_nF45He6vXnL3Qv3R4vSJH');
     emailjs.send("gmail", "online_cv", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.email.value,
@@ -15,7 +16,7 @@ function sendMail(contactForm) {
             },
             function (error) {
                 console.log("FAILED", error)
-                document.getElementById('message-response').innerHTML = "The email had failed to send."
+                document.getElementById('message-response').innerHTML = "The email failed to send."
             }
         );
     return false;
