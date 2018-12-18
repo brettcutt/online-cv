@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+    $('#menu-bars').click(function () {
+        $("#collapse").toggle("blind", 1000);
+    })
+
+    $(".mobile-nav li").click(function () {
+        $("#collapse").toggle("blind", 1000);
+    })
+
+    // NAVBAR ANIMATION 
+
     $(window).scroll(function () {
         var home = $('#home').position().top;
         var home1 = $('#home1').position().top;
@@ -32,6 +42,33 @@ $(document).ready(function () {
         }
     });
 
+    //SMOOTH SCROLL
+    $('nav a').click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+    });
+
+    $(window).scroll(function () {
+        // NAV LINK ACTIVE SWITCHER
+        var scrollBarLocation = $(this).scrollTop();
+        var index = $(".nav-item").index(this);
+        $('nav a').each(function () {
+            var sectionOffset = $(this.hash).offset().top - 30;
+            if (sectionOffset <= scrollBarLocation) {
+                $(this).parent().parent().children().not(index).removeClass('highlight');
+                if ($(this).parent().index() == 0) {
+                    $(this).parent().removeClass('highlight');
+                }
+                else {
+                    $(this).parent().addClass('highlight');
+                }
+            }
+        });
+
+    });
+
     $(".timeline-item").eq(0).addClass('white-disc')
     $(".timeline-item").eq(0).children().last().addClass('line')
     $(".timeline-item").eq(0).children().first().addClass('verticle-line')
@@ -55,6 +92,8 @@ $(document).ready(function () {
             $(".timeline-item").eq(0).children().last().removeClass('line')
         }
 
+        // CHANGING HISTORY
+
     }, function () {
 
         $(this).removeClass('white-disc');
@@ -73,6 +112,11 @@ $(document).ready(function () {
         }
     });
 
+    $(".card-head").hover(function () {
+        $(this).addClass('white-disc')
+    }, function () {
+        $(this).removeClass('white-disc')
+    })
 
 
 })

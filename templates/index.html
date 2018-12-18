@@ -1,5 +1,5 @@
 {% extends 'base.html' %}{% block content %}
-<div class="test2 test-reverse"></div>
+<div class="test2 test-reverse d-none d-sm-block"></div>
 <span id="home"></span>
 <div class='index'>
 
@@ -7,34 +7,60 @@
         <h1>Brett Cutting</h1>
 
         <h2>Full Stack Web Developer</h2>
-        <span id="home1"></span>
     </div>
-    <div class="nav">
-        <nav class="nav-bar rise-reverse">
+
+    <div class="nav d-none d-sm-block">
+        <nav class="nav-bar rise-reverse ">
             <ul class='nav-list rotateul-reverse'>
                 <li class='nav-item  rotateli-reverse'>
-                    <a class='change-color-reverse' href=' #home'>Home</a>
+                    <a class='change-color-reverse scroll' href=' #home'>Home</a>
                 </li>
                 <li class='nav-item rotateli-reverse'>
-                    <a class='change-color-reverse' href=' #about-me'>About Me</a>
+                    <a class='change-color-reverse scroll' href=' #about-me'>About Me</a>
                 </li>
                 <li class='nav-item rotateli-reverse'>
-                    <a class='change-color-reverse' href=' #skills'>Skills</a>
+                    <a class='change-color-reverse scroll' href=' #skills'>Skills</a>
                 </li>
                 <li class='nav-item rotateli-reverse'>
-                    <a class='change-color-reverse' href=' #history'>History</a>
+                    <a class='change-color-reverse scroll' href=' #history'>History</a>
                 </li>
                 <li class='nav-item rotateli-reverse'>
-                    <a class='change-color-reverse' href='#projects'>Projects</a>
+                    <a class='change-color-reverse scroll' href='#projects'>Projects</a>
                 </li>
                 <li class='nav-item rotateli-reverse'>
-                    <a class='change-color-reverse' href='#contact'>Contact</a>
+                    <a class='change-color-reverse scroll' href='#contact'>Contact</a>
                 </li>
             </ul>
         </nav>
 
     </div>
 
+
+    <i id="menu-bars" class="fa fa-bars d-block d-sm-none" aria-hidden="true"></i>
+    <div class="mobile-nav" id="collapse">
+        <ul class=''>
+            <li class=''>
+                <a class='' href=' #home'>Home</a>
+            </li>
+            <li class=''>
+                <a class='' href=' #about-me'>About Me</a>
+            </li>
+            <li class=''>
+                <a class='' href=' #skills'>Skills</a>
+            </li>
+            <li class=''>
+                <a class='' href=' #history'>History</a>
+            </li>
+            <li class=''>
+                <a class='' href='#projects'>Projects</a>
+            </li>
+            <li class=''>
+                <a class='' href='#contact'>Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <span id="home1"></span>
 </div>
 
 {% block aboutme %}
