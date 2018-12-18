@@ -13,6 +13,9 @@ with open("data/skills.json", 'r') as file:
 with open("data/history.json", 'r', encoding='utf8') as file:
     history = json.load(file)
 
+with open("data/education.json", 'r') as file:
+    education = json.load(file)
+
 with open("data/projects.json", 'r') as file:
     projects = json.load(file)
 
@@ -20,6 +23,7 @@ with open("data/projects.json", 'r') as file:
 def index():
     return render_template('index.html', skills=skills,
                                          history=history,
+                                         education=education,
                                          projects=projects)
 
 
