@@ -1,49 +1,144 @@
 {% block history %}
 <span id='history'></span>
 <div class='work-history'>
-    <div class='container'>
+    <div class='container '>
 
-        <div class="row padding-t-25">
-            <div class='col-12 col-sm-6 margin-t-25'>
-
-                {% for item in history %}
-                <div class="timeline-item" dates='{{ item.dates }}'>
-                    <p><b>{{ item.position }}</b></p>
-                    <p>{{ item.company }}</p>
-                    <div class='growing-line d-none d-lg-block'></div>
-                </div>
-                <br>
-                {% endfor %}
-
-            </div>
-
+        <div class="row padding-t-25 ">
             <div class='col-12 col-sm-6 '>
                 <h2 class="center margin-t-25">History</h2>
-                <div class="short-line-black"></div>
-                <div class="history-right-parent">
-                    <div class='history-right-child'>
-                        {% for item in history %}
-                        <div class="history-description">
-                            <h4 class='center'>{{ item.position }}</h4>
-                            <div class="underline"></div>
-                            {% for description in item.description %}
-                            <p>{{ description }}
-                            </p>
-                            {% endfor %}
-                            <div>
-                                {% if item.other_tasks %}
-                                <p>Other tasks included:</p>
-                                <ul>
-                                    {% for task in item.other_tasks %}
-                                    <li>{{ task }}</li>
-                                    {% endfor %}
-                                </ul>
-                                {% endif%}
+                <!--ORIGINAL HISTORY
+
+                <div class="history-left">
+                    {% for item in history %}
+                    <div class="timeline-item">
+                        <p class='dates'>{{ item.dates }}</p>
+                        <p class='position'><b>{{ item.position }}</b></p>
+                        <p class='company'>{{ item.company }}</p>
+                        <div class='growing-line d-none d-lg-block'></div>
+                    </div>
+                    <br>
+                    {% endfor %}
+                </div>
+-->
+
+
+                <div class="accordion history-left" id="accordionExample">
+                    {% for item in history %}
+                    <div class="card ">
+                        <div class="card-head" id="heading{{ loop.index }}">
+                            <h5 class="mb-0">
+                                <div class="" data-toggle="collapse" data-target="#collapse{{ loop.index }}"
+                                    aria-expanded="true" aria-controls="collapse{{ loop.index }}">
+                                    <p class='dates'>{{ item.dates }}</p>
+                                    <p class='position'><b>{{ item.position }}</b></p>
+                                    <p class='company'>{{ item.company }}</p>
+                                </div>
+                            </h5>
+                        </div>
+                        {% if loop.index == 1 %}
+                        <div id="collapse{{ loop.index }}" class="collapse show" aria-labelledby="heading{{ loop.index }}"
+                            data-parent="#accordionExample">
+                            {% else%}
+                            <div id="collapse{{ loop.index }}" class="collapse" aria-labelledby="heading{{ loop.index }}"
+                                data-parent="#accordionExample">
+                                {% endif %}
+
+                                <div class="card-body">
+                                    <div class="">
+                                        <div class="underline"></div>
+                                        {% for description in item.description %}
+                                        <p>{{ description }}
+                                        </p>
+                                        {% endfor %}
+                                        <div>
+                                            {% if item.other_tasks %}
+                                            <p>Other tasks included:</p>
+                                            <ul>
+                                                {% for task in item.other_tasks %}
+                                                <li>{{ task }}</li>
+                                                {% endfor %}
+                                            </ul>
+                                            {% endif%}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
+
+
+
+                <div class='col-12 col-sm-6'>
+                    <h2 class="center margin-t-25">Education</h2>
+
+                    <div class="accordion history-left" id="accordionExample">
+                        {% for item in education %}
+                        <div class="card ">
+                            <div class="card-head" id="heading-education{{ loop.index }}">
+                                <h5 class="mb-0">
+                                    <div class="" data-toggle="collapse" data-target="#collapse-education{{ loop.index }}"
+                                        aria-expanded="true" aria-controls="collapse-education{{ loop.index }}">
+                                        <p class='dates'>{{ item.dates }}</p>
+                                        <p class='position'><b>{{ item.achievement }}</b></p>
+                                        <p class='company'>{{ item.company }}</p>
+                                    </div>
+                                </h5>
+                            </div>
+                            {% if loop.index == 1 %}
+                            <div id="collapse-education{{ loop.index }}" class="collapse show" aria-labelledby="heading-education{{ loop.index }}"
+                                data-parent="#accordionExample">
+                                {% else%}
+                                <div id="collapse-education{{ loop.index }}" class="collapse" aria-labelledby="heading-education{{ loop.index }}"
+                                    data-parent="#accordionExample">
+                                    {% endif %}
+                                    {% if item.notes %}
+                                    <div class="card-body">
+                                        <div class="">
+                                            <div class="underline"></div>
+
+                                            {% for note in item.notes %}
+                                            <p>{{ note }}</p>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    {% endif%}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <!--ORIGINAL HISTORY
+                    <div class="short-line-black"></div>
+                    <div class="history-right-parent">
+                        <div class='history-right-child'>
+                            {% for item in history %}
+                            <div class="history-description">
+                                <h4 class='center'>{{ item.position }}</h4>
+                                <div class="underline"></div>
+                                {% for description in item.description %}
+                                <p>{{ description }}
+                                </p>
+                                {% endfor %}
+                                <div>
+                                    {% if item.other_tasks %}
+                                    <p>Other tasks included:</p>
+                                    <ul>
+                                        {% for task in item.other_tasks %}
+                                        <li>{{ task }}</li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif%}
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+-->
+
             </div>
         </div>
     </div>
