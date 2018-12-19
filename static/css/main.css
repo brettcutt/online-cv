@@ -679,7 +679,6 @@ nav a:hover {
 }
 
 .progress {
-    position: relative;
     height: 25px;
     margin-bottom: 20px;
     background-color: #8699ad !important;
@@ -700,40 +699,52 @@ nav a:hover {
 
 .html {
     background-color: #e34c26 !important;
+    width:90%;
 }
 .css {
     background-color: #3b5998 !important;
+    width:90%;
 }
 .scss {
     background-color: #c6538c !important;
+    width:70%;
 }
 .javascript {
     background-color: #f7df1e !important;
+    width:70%;
 }
 .jquery {
     background-color: #7acef4 !important;
+    width:80%;
 }
 .django {
     background-color: #0C4B33 !important;
+    width:70%;
 }
 .mongo {
     background-color: #4DB33D !important;
+    width:70%;
 }
 .mysql {
     background-color: #f29111 !important;
+    width:60%;
 }
 .bootstrap {
     background-color: #563d7c !important;
+    width:90%;
 }
 .git {
     background-color: #f34f29 !important;
+    width:80%;
 }
 .python {
     background-color: #306998 !important;
+    width:80%;
 }
 
 .flask {
     background-color: #000 !important;
+    width:70%;
 }
 
 
