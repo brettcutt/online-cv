@@ -1,7 +1,7 @@
 {% block skills %}
 
 <span id='skills'></span>
-<div class='skills'>
+<div id="skills-page" class='skills'>
     <h2 class="center">Skills</h2>
     <div class="short-line-black"></div>
     <div class='container'>
@@ -15,8 +15,7 @@
                 <div class="progress">
                     <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
                         aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
-                        0"
-                        aria-valuemax="100">
+                        0" aria-valuemax="100">
                         <span class="sr-only"></span>
                         <span class="progress-type">{{ item.name }}</span>
                     </div>
@@ -33,9 +32,8 @@
                 {% if item.type == 'frameworks' %}
                 <div class="progress">
                     <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                         aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
-                        0"
-                        aria-valuemax="100">
+                        aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
                         <span class="sr-only"></span>
                         <span class="progress-type">{{ item.name }}</span>
                     </div>
@@ -53,9 +51,8 @@
                 {% if item.type == 'databases' %}
                 <div class="progress">
                     <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-                         aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
-                        0"
-                        aria-valuemax="100">
+                        aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                        0" aria-valuemax="100">
                         <span class="sr-only"></span>
                         <span class="progress-type">{{ item.name }}</span>
                     </div>
@@ -71,7 +68,8 @@
                 {% for item in skills %}
                 {% if item.type == 'version control' %}
                 <div class="progress">
-                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
+                    <div class="{{ item.color }} progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        aria-valuenow=" {{ item.valuenow }}" aria-valuemin="
                         0" aria-valuemax="100">
                         <span class="sr-only"></span>
                         <span class="progress-type">{{ item.name }}</span>

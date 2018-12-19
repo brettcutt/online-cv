@@ -663,8 +663,8 @@ nav a:hover {
 }
 
 .skills {
-    background-image: url(../images/skills.jpg);
-    background-attachment: fixed;
+    /*BACKGROUND-ATTACHMENT AND BACKGROUND-SIZE ARE SET IN javascript.js AS A FIX TO EDGE BACKGROUND IMAGE TURNING DISAPPEARING*/
+    background: url(../images/skills.jpg);
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -747,11 +747,6 @@ nav a:hover {
     width:70%;
 }
 
-
-
-
-
-
 /* ############################ HISTORY */
 
 .overlay-white {
@@ -764,11 +759,10 @@ nav a:hover {
 }
 
 .work-history {
+    /*BACKGROUND-ATTACHMENT AND BACKGROUND-SIZE ARE SET IN javascript.js AS A FIX TO EDGE BACKGROUND IMAGE TURNING DISAPPEARING*/
     background-image: url(../images/history1.jpg);
-    background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
-    background-size: cover;
     min-height:100vh!important;
     position: relative;
     padding-top: 75px;
