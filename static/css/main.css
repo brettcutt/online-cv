@@ -777,7 +777,7 @@ padding-bottom: 25px;
 
 .history-left {
     border-left: 2px solid #8F8F8F;
-    padding: 1em .18em;
+    padding: 1em 1.2px;
 }
 
 .timeline-item {
@@ -1159,15 +1159,8 @@ footer a:hover {
 .cv-arrow {
     
     position: absolute;
-    right: -160px;
-    top: -62px;
-    transform: rotate(-35deg);
-    animation-name: move-arrow;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+    right: -170px;
+    top: 4px;
 }
 
 .cv-arrow span {
@@ -1180,10 +1173,3 @@ footer a:hover {
     font-size: 30px;
 }
 
-
-@keyframes move-arrow {
-    from {right: -160px;
-        top: -62px;}
-    to {right: -170px;
-        top: -72px;}
-}
