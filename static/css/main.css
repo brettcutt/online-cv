@@ -85,7 +85,7 @@ body {
 }
 
 .highlight a{
-    background-color: #FFF;
+    background-color: rgba(255,255,255, 0.8);
     border-radius: 10px;
     padding: 3px 5px;;
 }
@@ -288,18 +288,207 @@ nav a:hover {
 
 
 /* ##########################    MOBILE NAV */
+/*  spinning burger menu */
+
 #menu-bars {
-    z-index: 3;
-    position: fixed;
+    background-color: rgba(255,255,255,.5);
     right: 20px;
     top: 20px;
-    font-size: 40px;
-    z-index: 4;
-    background-color: rgba(255,255,255,.5);
-    padding: 0 5px;
+    display: inline-block;
+    padding: 5px;
+    position: fixed;
+    height: 40px;
+    width: 45px;
     border-radius: 5px;
+    z-index: 4;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.bar1, .bar2, .bar3 {
+    position: absolute;
+    width: 34px;
+    height: 5px;
+    border-radius: 3px;
+    background-color: #000;
+}
+
+.bar1 {
+    top: 5px;
+    left: 5px;
+}
+.bar2 {
+    top: 17.5px;
+    left: 5px;
+}
+.bar3 {
+    top: 30px;
+    left: 5px;
+}
+
+.bar1-animate {
+    animation-name: bar1;
+}
+.bar2-animate {
+    animation-name: bar2;
+}
+.bar3-animate {
+    animation-name: bar3;
+}
+.bar1-animate-r {
+    animation-name: bar1r;
+}
+.bar2-animate-r {
+    animation-name: bar2r;
+}
+.bar3-animate-r {
+    animation-name: bar3r;
+}
+
+.forwards {
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-direction: reverse;
+}
+
+.backwards {
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-direction: normal;
+}
+
+
+@keyframes bar1{
+    0% {
+        top: 5px;
+        left:5px;
+          width: 34px;
+        height:5px;
+    }
+    50% {
+        top: 17.5px;
+        width:0px;
+        height:0px;
+        left:22.5px;
+    }
+    100% {
+        top: 2.5px;
+        width:35px;
+        height:35px;
+        left:5px;
+        border-radius: 100px;
+        background-color: rgba(255,255,255,0);;
+        border: 1px solid #000;
+}
+}
+@keyframes bar2 {
+    0% {
+        width: 34px;
+        left:5px;
+        height:5px;
+    }
+    50% {
+        width:0px;
+        height:0px;
+        left:22.5px;
+        transform: rotate(0deg)
+    }
+    100% {
+        top: 18px;
+        width:25px;
+        height:1px;
+        left:10px;
+        transform: rotate(405deg)
+    }
+}
+@keyframes bar3 {
+    0% {
+        top: 30px;
+        left:5px;
+        width: 34px;
+        height:5px;
+    }
+    50% {
+        top: 17.5px;
+        width:0px;
+        height:0px;
+        left:22.5px;
+        transform: rotate(0deg)
+    }
+    100% {top: 18px;
+        width:25px;
+        height:1px;
+        left:10px;
+        transform: rotate(675deg)
+    }
+}
+@keyframes bar1r{
+    0% {
+        top: 5px;
+        left:5px;
+          width: 34px;
+        height:5px;
+    }
+    50% {
+        top: 17.5px;
+        width:0px;
+        height:0px;
+        left:22.5px;
+    }
+    100% {
+        top: 2.5px;
+        width:35px;
+        height:35px;
+        left:5px;
+        border-radius: 100px;
+        background-color: rgba(255,255,255,0);;
+        border: 1px solid #000;
+}
+}
+@keyframes bar2r {
+    0% {
+        width: 34px;
+        left:5px;
+        height:5px;
+    }
+    50% {
+        width:0px;
+        height:0px;
+        left:22.5px;
+        transform: rotate(0deg)
+    }
+    100% {
+        top: 18px;
+        width:25px;
+        height:1px;
+        left:10px;
+        transform: rotate(405deg)
+    }
+}
+@keyframes bar3r {
+    0% {
+        top: 30px;
+        left:5px;
+        width: 34px;
+        height:5px;
+    }
+    50% {
+        top: 17.5px;
+        width:0px;
+        height:0px;
+        left:22.5px;
+        transform: rotate(0deg)
+    }
+    100% {top: 18px;
+        width:25px;
+        height:1px;
+        left:10px;
+        transform: rotate(675deg)
+    }
+}
+
+/*  spinning burger menu */
+/*  blind down navmenu */
 .mobile-nav {
     position: fixed;
     top: 0px;
@@ -328,7 +517,11 @@ nav a:hover {
     font-weight: bold;
     font-size: 18px;
 }
-
+.mobile-nav a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+/*  blind down navmenu */
 
 /* ##########################    ABOUT ME */
 .about-me {
