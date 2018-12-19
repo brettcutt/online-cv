@@ -111,49 +111,6 @@ $(document).ready(function () {
 
     });
 
-    $(".timeline-item").eq(0).addClass('white-disc')
-    $(".timeline-item").eq(0).children().last().addClass('line')
-    $(".timeline-item").eq(0).children().first().addClass('verticle-line')
-
-    $(".timeline-item").hover(function () {
-        var index = $(".timeline-item").index(this);
-
-
-        $(this).addClass('white-disc');
-        $(this).children().last().addClass('line')
-        $(this).children().first().addClass('verticle-line')
-
-        $('.history-description').hide()
-        $('.history-description').eq(index).show()
-
-        if (index == 0) {
-            $(".timeline-item").eq(0).addClass('white-disc')
-            $(".timeline-item").eq(0).children().last().addClass('line')
-        } else {
-            $(".timeline-item").eq(0).removeClass('white-disc')
-            $(".timeline-item").eq(0).children().last().removeClass('line')
-        }
-
-        // CHANGING HISTORY
-
-    }, function () {
-
-        $(this).removeClass('white-disc');
-        $(this).children().last().removeClass('line')
-        $(this).children().first().removeClass('verticle-line')
-        $('.history-description').hide()
-        $('.history-description').eq(0).show()
-
-        if ($('.history-description').not(':eq(0)').is(':visible')) {
-            $(".timeline-item").eq(0).removeClass('white-disc')
-            $(".timeline-item").eq(0).children().last().removeClass('line')
-        } else {
-
-            $(".timeline-item").eq(0).addClass('white-disc')
-            $(".timeline-item").eq(0).children().last().addClass('line')
-        }
-    });
-
     $(".card-head").hover(function () {
         $(this).addClass('white-disc')
     }, function () {
