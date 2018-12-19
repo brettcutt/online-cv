@@ -1,5 +1,5 @@
 body {
-    font-family: 'Nobile', sans-serif !important;
+    font-family: 'Lato', sans-serif;
     position: relative;
 }
 
@@ -136,6 +136,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
 }
 
 
@@ -227,7 +228,7 @@ nav a:hover {
 
 @keyframes rise-reverse {
     from {top: 0px;}
-    to {top: 380px; }
+    to {top: 28.5em; }
 }
 
 .rotateli {
@@ -285,6 +286,35 @@ nav a:hover {
         margin-top: 2em;
     }
 }
+
+.arrow-down {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+}
+
+.fa-arrow-down {
+    color: #fff;
+    font-size: 50px;
+    cursor: pointer;
+    animation-name: arrow-color;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.fa-arrow-down:hover {
+    font-size: 55px;
+}
+
+@keyframes arrow-color {
+    from {color: #fff;}
+    to {color: rgba(255,255,255,.4);}
+}
+
 
 
 /* ##########################    MOBILE NAV */
@@ -378,7 +408,7 @@ nav a:hover {
         left:5px;
         border-radius: 100px;
         background-color: rgba(255,255,255,0);;
-        border: 1px solid #000;
+        border: 2px solid #000;
 }
 }
 @keyframes bar2 {
@@ -396,7 +426,7 @@ nav a:hover {
     100% {
         top: 18px;
         width:25px;
-        height:1px;
+        height:2px;
         left:10px;
         transform: rotate(405deg)
     }
@@ -417,7 +447,7 @@ nav a:hover {
     }
     100% {top: 18px;
         width:25px;
-        height:1px;
+        height:2px;
         left:10px;
         transform: rotate(675deg)
     }
@@ -442,7 +472,7 @@ nav a:hover {
         left:5px;
         border-radius: 100px;
         background-color: rgba(255,255,255,0);;
-        border: 1px solid #000;
+        border: 2px solid #000;
 }
 }
 @keyframes bar2r {
@@ -460,7 +490,7 @@ nav a:hover {
     100% {
         top: 18px;
         width:25px;
-        height:1px;
+        height:2px;
         left:10px;
         transform: rotate(405deg)
     }
@@ -481,7 +511,7 @@ nav a:hover {
     }
     100% {top: 18px;
         width:25px;
-        height:1px;
+        height:2px;
         left:10px;
         transform: rotate(675deg)
     }
@@ -1018,8 +1048,8 @@ padding-bottom: 25px;
 	cursor:pointer;
 	color:#F0F0F0;
 	border-radius:10px;
-	border-bottom:4px solid #0045A6;
-	box-shadow: 6px 6px 6px #999;
+	border-bottom:4px solid #8c3b28;
+	box-shadow: 6px 6px 6px #ada5a57a;
 	
 	-webkit-user-select: none;        
 	-moz-user-select: none;
@@ -1027,10 +1057,10 @@ padding-bottom: 25px;
 	-o-user-select: none;
 	user-select: none;
 	
-	background: -webkit-linear-gradient(#00C8F8, #0067F7);
-    background: -o-linear-gradient(#00C8F8, #0067F7);
-    background: -moz-linear-gradient(#00C8F8, #0067F7);
-    background: linear-gradient(#00C8F8, #0067F7);
+	background: -webkit-linear-gradient(#f34f29, #f53d14);
+    background: -o-linear-gradient(#f34f29, #f53d14);
+    background: -moz-linear-gradient(#f34f29, #f53d14);
+    background: linear-gradient(#f34f29, #f53d14);
 	
 	-webkit-transition: background 0.05s linear;  
     -moz-transition: background 0.05s linear;  
@@ -1115,4 +1145,40 @@ footer a:hover {
     footer p {
         padding-bottom: 0;
     }
+}
+
+.cv-box {
+    position: relative;
+}
+
+.cv-arrow {
+    
+    position: absolute;
+    right: -160px;
+    top: -62px;
+    transform: rotate(-35deg);
+    animation-name: move-arrow;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.cv-arrow span {
+    font-size: 16px;
+    color: #fff;
+}
+
+.fa-arrow-left {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+@keyframes move-arrow {
+    from {right: -160px;
+        top: -62px;}
+    to {right: -170px;
+        top: -72px;}
 }

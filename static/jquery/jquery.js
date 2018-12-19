@@ -82,6 +82,16 @@ $(document).ready(function () {
         }, 1000);
     });
 
+
+    //SMOOTH SCROLL DOWN ARROW
+    $('.arrow-scroll').click(function (e) {
+        e.preventDefault();
+        $('body,html').animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+    });
+
+
     $(window).scroll(function () {
         // NAV LINK ACTIVE SWITCHER
         var scrollBarLocation = $(this).scrollTop();
