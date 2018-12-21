@@ -42,35 +42,38 @@ $(document).ready(function () {
 
     // NAVBAR ANIMATION 
 
+
+
     $(window).scroll(function () {
         var home = $('#home').position().top;
         var home1 = $('#home1').position().top;
         var skills = $('#skills').position().top;
 
-        if ($(window).scrollTop() < home1) {
+        if ($(window).scrollTop() < home1 && !$('.nav-bar').hasClass('first-load')) {
             $('.nav-bar').removeClass('rise')
             $('.nav-bar').removeClass('pos')
             $('.nav-item').removeClass('rotateli')
             $('.nav-list').removeClass('rotateul')
             $('.nav-list a').removeClass('change-color')
-            $('body').children().first().removeClass('test')
+            $('body').children().first().removeClass('top-navbar')
             $('.nav-bar').addClass('rise-reverse')
             $('.nav-item').addClass('rotateli-reverse')
             $('.nav-list').addClass('rotateul-reverse')
             $('.nav-list a').addClass('change-color-reverse')
-            $('body').children().first().addClass('test-reverse')
-        } else {
+            $('body').children().first().addClass('top-navbar-reverse')
+        } else if ($(window).scrollTop() > home1) {
+            $('.nav-bar').removeClass('first-load')
             $('.nav-bar').removeClass('rise-reverse')
             $('.nav-item').removeClass('rotateli-reverse')
             $('.nav-list').removeClass('rotateul-reverse')
             $('.nav-list a').removeClass('change-color-reverse')
-            $('body').children().first().removeClass('test-reverse')
+            $('body').children().first().removeClass('top-navbar-reverse')
             $('.nav-bar').addClass('rise')
             $('.nav-bar').addClass('pos')
             $('.nav-item').addClass('rotateli')
             $('.nav-list').addClass('rotateul')
             $('.nav-list a').addClass('change-color')
-            $('body').children().first().addClass('test')
+            $('body').children().first().addClass('top-navbar')
         }
     });
 
@@ -91,14 +94,43 @@ $(document).ready(function () {
         }, 1000);
     });
 
-
+    // If the page scrolls the nav a classes will be set to 
     $(window).scroll(function () {
         // NAV LINK ACTIVE SWITCHER
-        var scrollBarLocation = $(this).scrollTop();
+        var windowTop = $(this).scrollTop();
         var index = $(".nav-item").index(this);
+
         $('nav a').each(function () {
-            var sectionOffset = $(this.hash).offset().top - 30;
-            if (sectionOffset <= scrollBarLocation) {
+            var location = $(this.hash).offset().top - 30;
+            if (location <= windowTop) {
+                $(this).parent().parent().children().not(index).removeClass('highlight');
+                if ($(this).parent().index() == 0) {
+                }
+                else {
+                    $(this).parent().addClass('highlight');
+                }
+            }
+        });
+
+    });
+
+    // If the page refreshes and loads past the home point, the nav classes will set
+    var windowTop = $(window).scrollTop()
+    var home = $('#home1').position().top;
+
+    if (windowTop > home) {
+        $('.nav-bar').addClass('rise')
+        $('.nav-bar').addClass('pos')
+        $('.nav-item').addClass('rotateli')
+        $('.nav-list').addClass('rotateul')
+        $('.nav-list a').addClass('change-color')
+        $('body').children().first().addClass('top-navbar')
+        var windowTop = $(this).scrollTop();
+        var index = $(".nav-item").index(this);
+
+        $('nav a').each(function () {
+            var location = $(this.hash).offset().top - 30;
+            if (location <= windowTop) {
                 $(this).parent().parent().children().not(index).removeClass('highlight');
                 if ($(this).parent().index() == 0) {
                     $(this).parent().removeClass('highlight');
@@ -108,8 +140,7 @@ $(document).ready(function () {
                 }
             }
         });
-
-    });
+    }
 
     $(".card-head").hover(function () {
         $(this).addClass('white-disc')
