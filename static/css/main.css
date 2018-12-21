@@ -87,10 +87,11 @@ body {
 .highlight a{
     background-color: rgba(255,255,255, 0.8);
     border-radius: 10px;
-    padding: 3px 5px;;
+    padding: 3px 5px;
 }
 
-.test2{
+
+.navbar2{
     position: fixed;
     top: 0;
     left: 0;
@@ -98,30 +99,30 @@ body {
     height: 0px;
     z-index: 1;
 }
-.test {
+.top-navbar {
     
-    animation-name: test;
+    animation-name: top-navbar;
     animation-duration: 1s;
     animation-direction: normal;
     animation-fill-mode: forwards;
     background-color: rgba(148, 144, 144, 0.8);
 }
 
-@keyframes test {
+@keyframes top-navbar {
     from {height: 0px}
     to {height: 40px}
 }
 
-.test-reverse {
+.top-navbar-reverse {
     
-    animation-name: test-reverse;
+    animation-name: top-navbar-reverse;
     animation-duration: 1s;
     animation-direction: normal;
     animation-fill-mode: forwards;
     background-color: rgba(148, 144, 144, 0.8);
 }
 
-@keyframes test-reverse {
+@keyframes top-navbar-reverse {
     from {height: 40px}
     to {height: 0px}
 }
@@ -141,11 +142,11 @@ body {
 
 
 nav{
-    top: 380px;
+    top: 28.5em;
     width: 100%;
     height: 100px;
     position: absolute;
-    z-index: 1;;
+    z-index: 3;
 }
 
 .pos {
@@ -168,9 +169,11 @@ nav li {
     width: 100px;
 }
 
+
 nav a {
     color: #fff;
     font-weight: bold;
+    text-shadow: 5px -1px 15px rgba(0, 0, 0, 1)
 }
 
 nav a:hover {
@@ -828,7 +831,7 @@ padding-bottom: 25px;
     border: 2px solid #727987;
     top: 26px;
     left: -35px;
-    z-index: 2;
+    z-index: 1;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
@@ -953,6 +956,17 @@ padding-bottom: 25px;
 .card {
     margin: 0 auto 25px;
     background-color: rgba(255,255,255,.8) !important;
+    border: none !important;
+}
+
+
+.card-img {
+    transition: .75s;
+}
+
+.card-img:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);
 }
 
 .card p {
@@ -960,7 +974,7 @@ padding-bottom: 25px;
 }
 .projects ul {
     columns: 2;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .flex {
@@ -988,19 +1002,32 @@ padding-bottom: 25px;
 
 .project-icon {
     display: inline-block;
+    position: relative;
     font-size: 30px;
     color: #8F8F8F;
     margin: 0px 15px;
     width: 50px;
     height: 50px;
-    line-height: 55px;
+    line-height: 75px;
     background-color: #C3C3C3;
     border-radius: 100px;
+    transition: 1s;
     }
     
     .project-icon:hover {
         color: #564F6F;
     }
+
+.fa-laptop, .project-icon .fa-github{
+    position: absolute;
+    left: 8.5px;
+    top: 10px;
+}
+.project-icon .fa-github{
+    position: absolute;
+    left: 12.5px;
+    top: 9.5px;
+}
 
 /* ############################ CONTACT */
 
