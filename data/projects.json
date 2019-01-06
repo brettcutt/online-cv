@@ -74,5 +74,16 @@
       "github": "https://github.com/brettcutt/online-cv",
       "live_url": "https://online-curriculum-vitae.herokuapp.com/",
       "image": "cv-pic.jpg"
+   },
+   {
+      "name": "PHP practice",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "PHP"
+      ],
+      "github": "https://github.com/brettcutt/php-practise",
+      "live_url": "https://games-using-php.herokuapp.com/",
+      "image": "php-pic.jpg"
    }
 ]

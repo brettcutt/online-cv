@@ -36,6 +36,12 @@
         "valuenow": 80
     },
     {
+        "type": "languages",
+        "name": "PHP",
+        "color": "php",
+        "valuenow": 40
+    },
+    {
         "type": "frameworks",
         "name": "Bootstrap",
         "color": "bootstrap",
