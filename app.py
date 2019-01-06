@@ -1,10 +1,9 @@
 from flask import Flask, render_template, session, request
-import pymongo
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
 import json
-import env
+#import env
 
 app = Flask(__name__)
 
