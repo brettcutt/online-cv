@@ -3,12 +3,11 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
 import json
-import env
 
 app = Flask(__name__)
 
-
 if os.environ.get('ENVIRONMENT'):
+    import env
     app.secret_key = env.DB_CONFIG['SECRET_KEY']
     app.config["MONGO_DBNAME"] = env.DB_CONFIG['MONGO_DBNAME']
     app.config["MONGO_URI"] = env.DB_CONFIG['MONGO_URI']
