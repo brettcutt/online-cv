@@ -3,7 +3,7 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
 import json
-#import env
+import env
 
 app = Flask(__name__)
 
@@ -35,18 +35,22 @@ with open("data/projects.json", 'r') as file:
 
 @app.route('/')
 def index():
-
-    views = mongo.db.views.find_one()
+    user = request.remote_addr
+    views = mongo.db.views.find_one(
+        {'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {"views"})
 
     count = ""
     for key, value in views.items():
         if key != "_id":
             count = value
-    host = request.host.split(":")[0]
+
     if 'guest' not in session:
-        if host != "127.0.0.1":
+        if user != "127.0.0.1":
+
             mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
                 "$set": {"views": count + 1}})
+            mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+                "$push": {"users": user}}, upsert=True)
             session['guest'] = True
 
     return render_template('index.html', skills=skills,
