@@ -3,6 +3,8 @@ from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 import os
 import json
+import pytz
+from datetime import date, datetime
 
 app = Flask(__name__)
 
@@ -34,23 +36,42 @@ with open("data/projects.json", 'r') as file:
 
 @app.route('/')
 def index():
+    local_time = pytz.timezone('Australia/Adelaide')
+    adelaide_now = str(datetime.now(local_time).strftime('%H:%M:%S %d-%m-%Y '))
     user = request.remote_addr
+    user = user.replace('.', "")
+
     views = mongo.db.views.find_one(
-        {'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {"views"})
+        {'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")})
 
     count = ""
     for key, value in views.items():
-        if key != "_id":
+        if key == "views":
             count = value
 
-    if 'guest' not in session:
-        if user != "127.0.0.1":
+    update_view = mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+        "$set": {"views": count + 1}}, upsert=True)
 
-            mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
-                "$set": {"views": count + 1}})
-            mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
-                "$push": {"users": user}}, upsert=True)
-            session['guest'] = True
+    record_exists = False
+
+    for item in views['users']:
+        if item[user]:
+            record_exists = True
+    if 'guest' not in session:
+        if user != "127001":
+            if record_exists:
+                update_view
+
+                mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+                    "$push": {"users.$[]."+user+".Time": adelaide_now}})
+                session['guest'] = True
+
+            else:
+                update_view
+
+                mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+                    "$push": {"users": {user: {"Time": [adelaide_now]}}}}, upsert=True)
+                session['guest'] = True
 
     return render_template('index.html', skills=skills,
                            history=history,
