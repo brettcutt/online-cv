@@ -49,9 +49,6 @@ def index():
         if key == "views":
             count = value
 
-    update_view = mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
-        "$set": {"views": count + 1}}, upsert=True)
-
     record_exists = False
     try:
         for item in views['users']:
@@ -64,14 +61,16 @@ def index():
     if 'guest' not in session:
         if user != "127001":
             if record_exists:
-                update_view
+                mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+                    "$set": {"views": count + 1}}, upsert=True)
 
                 mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
                     "$push": {"users.$[]."+user+".Time": adelaide_now}})
                 session['guest'] = True
 
             else:
-                update_view
+                mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
+                    "$set": {"views": count + 1}}, upsert=True)
                 mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
                     "$push": {"users": {user: {"Time": [adelaide_now]}}}}, upsert=True)
                 session['guest'] = True
