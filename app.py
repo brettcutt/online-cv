@@ -53,10 +53,14 @@ def index():
         "$set": {"views": count + 1}}, upsert=True)
 
     record_exists = False
+    try:
+        for item in views['users']:
+            for item2 in item:
+                if item2:
+                    record_exists = True
+    except:
+        print("new user")
 
-    for item in views['users']:
-        if item[user]:
-            record_exists = True
     if 'guest' not in session:
         if user != "127001":
             if record_exists:
@@ -68,10 +72,11 @@ def index():
 
             else:
                 update_view
-
                 mongo.db.views.update_one({'_id': ObjectId("5c319cd0fb6fc0600bd9fe89")}, {
                     "$push": {"users": {user: {"Time": [adelaide_now]}}}}, upsert=True)
                 session['guest'] = True
+    else:
+        print('in session')
 
     return render_template('index.html', skills=skills,
                            history=history,
@@ -81,4 +86,5 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(host=os.environ.get('IP'), port=os.environ.get('PORT'), debug=True)
+    app.run(host=os.environ.get('IP'),
+            port=os.environ.get('PORT'), debug=False)
