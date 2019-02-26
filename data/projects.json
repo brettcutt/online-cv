@@ -10,15 +10,17 @@
       "image": "bjj.jpg"
    },
    {
-      "name": "SA Offences",
+      "name": "Restaurants of Australia",
       "description": [
          "HTML 5",
          "CSS 3",
-         "Javascript"
+         "Javascript",
+         "Jquery",
+         "AJAX"
       ],
-      "github": "https://github.com/brettcutt/sa-offences",
-      "live_url": "https://brettcutt.github.io/sa-offences/",
-      "image": "sa-offences.jpg"
+      "github": "https://github.com/brettcutt/restaurant-locator",
+      "live_url": "https://brettcutt.github.io/restaurant-locator/",
+      "image": "restaurants.jpg"
    },
    {
       "name": "Conundrum",
@@ -74,6 +76,17 @@
       "github": "https://github.com/brettcutt/online-cv",
       "live_url": "https://online-curriculum-vitae.herokuapp.com/",
       "image": "cv-pic.jpg"
+   },
+   {
+      "name": "SA Offences",
+      "description": [
+         "HTML 5",
+         "CSS 3",
+         "Javascript"
+      ],
+      "github": "https://github.com/brettcutt/sa-offences",
+      "live_url": "https://brettcutt.github.io/sa-offences/",
+      "image": "sa-offences.jpg"
    },
    {
       "name": "PHP practice",
